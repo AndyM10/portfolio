@@ -1,0 +1,17 @@
+---
+interface Props {
+  label:string
+}
+
+const {label} = Astro.props
+const link = label.toLowerCase()
+---
+
+<span >
+  <a href=`https:${link}.com`
+    target="_blank"
+    class="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded p-1 inline-flex items-center leading-4 no-underline">
+    <img class="mr-1" src=`/svgs/${link}.svg`/>
+    { label}
+  </a>
+</span>

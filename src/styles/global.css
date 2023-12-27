@@ -5,10 +5,12 @@
 
 @layer utilities{
   .bg-dot {
-    background-image: radial-gradient(gray 1px, transparent 1px);
-    background-size: 25px 25px;
+    background-image: radial-gradient(#333 1px,transparent 0),radial-gradient(#333 1px,transparent 0);
+    /* background-image: radial-gradient(gray 1px, transparent 1px); */
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px;
   }
-  }
+}
 
 @layer base{
   body{
