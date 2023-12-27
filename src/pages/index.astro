@@ -1,0 +1,27 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en" class="bg:radial-gradient(black 1px, transparent 0);">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body class="min-h-screen">
+		<Header title={SITE_TITLE} />
+		<main class="hero min-h-screen">
+			<div class="hero-content min-w-lg min-h-lg flex-col lg:flex-row-reverse ">
+    		<img src="/me.jpeg" class="max-w-sm rounded-lg shadow-2xl" />
+    		<div>
+      		<h1 class="text-5xl font-bold">Hi, I'm Andrew</h1>
+      		<h2 class="text-3xl font-semibold">Fullstack Engineer</h2>
+      		<p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+    		</div>
+  		</div>		
+  	</main>
+		<Footer />
+	</body>
+</html>
