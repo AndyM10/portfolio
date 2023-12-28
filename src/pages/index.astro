@@ -3,6 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import TextCode from '../components/TextCode.astro';
+import SkillPill from '../components/SkillPill.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -21,6 +22,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
       		<h2 class="text-3xl font-semibold text-blue-200">Fullstack Engineer</h2>
       		<p class="pt-6">Hey! my name is Andrew Morrison, I'am a fullstack software engineer based in London.</p>
       		<p>I currently <u class="font-semibold"><a href="/work">work</a></u> as a fullstack engineer at <TextCode label="Selfridges"/>, replatforming and reinvigorating their engineering function</p>
+    			<div class="py-4">
+    			<SkillPill label="Typescript"/>
+					<SkillPill label="NextJS"/>
+					<SkillPill label="NodeJS"/>
+					<SkillPill label="AWS"/>
+					<SkillPill label="Supabase"/>
+    			</div>
     		</div>
   		</div>		
   	</main>
