@@ -65,7 +65,6 @@ our `home` handler as the such:
 #[template(path = "index.html")]
 struct HomeTemplate;
 
-struct HomeTemplate;
 async fn home() -> impl IntoResponse {
     HomeTemplate
 }
@@ -105,7 +104,7 @@ async fn chat(Form(form): Form<UserMessage>) -> impl IntoResponse {
 }
 ```
 
-In order to interact with Ollama I used the <mark>[ollama-rs](https://github.com/pepperoni21/ollama-rs)</mark> crate. Now when creating this I initally just passed
+In order to interact with Ollama I used the <mark>[ollama-rs](https://github.com/pepperoni21/ollama-rs)</mark> crate. Now when creating this I initially just passed
 messages Vector of type `ChatMessage` directly into my template as it was exactly the shape and content I needed back on the UI, however after many hours debugging 
 I realised that this this type doesnt match our function signature and implement the `IntoResponse` trait and that there is no way to add traits the third party crates.
 So I created my own struct `MessageResponse` and mapped our ollama response to it. 
@@ -223,11 +222,11 @@ The returned html is split into two files, one container file which will hold al
 </div>
 
 <!-- msg.html -->
-<div className="chat chat-start">
-  <div className="chat-header">
+<div class="chat chat-start">
+  <div class="chat-header">
     {{ msg.role }}
   </div>
-  <div className="chat-bubble chat-bubble-primary">{{ msg.content }}</div>
+  <div class="chat-bubble chat-bubble-primary">{{ msg.content }}</div>
 </div>
 ```
 
