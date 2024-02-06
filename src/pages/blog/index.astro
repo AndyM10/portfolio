@@ -21,7 +21,7 @@ const posts = (await getCollection('blog')).sort(
 	<body>
 		<Header />
 		<main class="min-h-screen py-4 grid justify-evenly">
-			<section class="max-w-screen-lg ">
+			<section class="max-w-screen-lg">
 				<ul class="flex flex-wrap place-content-center list-none m-0 p-0 gap-8">
 					{
 						posts.map((post) => (

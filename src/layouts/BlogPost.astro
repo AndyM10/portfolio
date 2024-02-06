@@ -22,7 +22,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				<div class="w-full">
 					{heroImage && <img class="block rounded-sm" width={1020} height={510} src={heroImage} alt="" />}
 				</div>
-				<div class="w-[720px] max-w-[calc(100%-2rem)] m-auto p-4">
+				<div class="w-[360px] lg:w-[720px] max-w-[calc(100%-2rem)] m-auto p-4">
 					<div class="mb-4 text-center">
 						<div class="mb-2">
 							<FormattedDate date={pubDate!} />
