@@ -1,71 +1,176 @@
----import BaseHead from "../components/BaseHead.astro";
+---
+import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header title={SITE_TITLE} />
-		<main class="antialiased max-w-2xl mb-40 flex flex-col md:flex-row mx-4 mt-8 lg:mx-auto min-h-screen">
-			<section class="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
-				<h2 class="text-3xl">my work</h2>
-				<p class="py-4">Here is a summary of my fullstack journey so far...</p>
-				<div class="divider divider-accent"></div>
-				<h3 class="text-xl font-semibold">Selfridges</h3>
-				<p class="text-gray-500">Senior Fullstack Engineer, Oct 2020 - Present</p>
-				<p>I joined Selfridges at a pivotal moment in their replatforming campign, helping to not only replatform the frontend to modern technologies but also backend systems to provide a smoother customer experience </p>
-				<ul class="list-disc mx-4">
-					<li>
-						Currently working on a new ‘Federated’ graphql platform using Apollo federation and typescript, replacing old and unscalable backend systems.
-					</li>
-					<li>
-						 Replatform legacy third party IFrame integration into a micro frontend using SSR (Server Side Rendering) , React and AWS (serverless)
-					</li>
-					<li>
-						Develop mfe (micro frontend) platfrom using NextJS and AWS S3 to deliver a more performant and scalable frontend.
-					</li>
-					<li>
-						Help drive a culture of change and engineering enthusiasm in a new department by hosting a monthly social event to encourage colleagues to share there interests and passions in tech.
-					</li>
-				</ul>
-				<div class="divider divider-accent"></div>
-				<h3 class="text-xl font-semibold">Dunelm</h3>
-				<p class="text-gray-500">Fullstack Engineer, Dec 2021 - Oct 2022</p>
-				<p>Full Stack Engineer in the checkout and payment team, with the objective of delivering a seamless and transparent way for Dunelm customers to pay.</p>
-				<ul class="list-disc mx-4">
-					<li>Responsible for maintaining and developing new features for Dunelm’s first micro frontend, which uses Fastly, NextJS and AWS S3, to deliver server rendered content to the user, and play an active role in helping Dunelm achieve its new micro frontend architecture.</li>
-					<li>Leading the development of an ApplePay payment option by integrating drop in react components from our integrated payment service provider with our payment backend microservice.</li>
-					<li>Created a new event driven system using AWS Lambda and Eventbridge to write transactions to a  DynamoDb for the in house transaction settlement system.</li>
-				</ul>
-				<p class="text-gray-500 pt-4">Graduate Software Engineer, Sept 2020 - Dec 2021</p>
-				<p>DevOps engineer developing and maintaining AWS infrastructure used for hosting Dunelm’s technical estate.</p>
-				<ul class="list-disc mx-4">
-					<li>Built a reusable pipeline library using Gitlab CI to help standardise CI/CD best practices and increase development flow of new applications. </li>
-					<li>Implemented custom VCL logic for our CDN (Fastly) to allow targeted traffic split when serving our new MFE platform.</li>
-					<li>Developed a reusable method using Terraform to allow direct to S3 routing of requests, allowing teams to serve content quicker from S3 via the edge of the CDN.</li>
-				</ul>
-				<p class="pt-4">Backend engineer developing serverless microservices (AWS ApiGateway and Lambda) using NodeJS (Typescript).</p>
-				<ul class="list-disc mx-4">
-					<li>Developed backend logic to ensure our order processing systems were Brexit compliant when processing orders being shipped to Northern Ireland and the Channel Islands.</li>
-					<li>Improved unit testing by moving outdated tests from mocha and chai to jest, increasing reliability of unit tests as well as increasing code coverage.</li>
-					<li>Led team in migrating current code base from bitbucket to Gitlab and developed pipelines using Gitlab CI, increasing the frequency and reliability of our releases.</li>
-				</ul>
-				<div class="divider divider-accent"></div>
-				<h3 class="text-xl font-semibold">Rolls Royce</h3>
-				<p class="text-gray-500">Software Engineer - Intern, June 2018 - July 2019</p>
-				<p>Software design engineer responsible for developing real-time control systems using Ada for the Trent-XWB fleet of turbo-fan jet engines, used on the Airbus A350 aircraft.</p>
-				<ul class="list-disc mx-4">
-					<li>Developed an engine configuration switching system that would determine certain engine parameters based on the type of XWB engine.</li>
-					<li>Led investigations into inefficient use of memory onboard the electronic engine control unit, including building custom tooling using python to scan binary files and determine current memory boundaries for that particular build.</li>
-					<li>Regularly presented new design implementations at Design Technical Approval meetings.</li>
-				</ul>
-			</section>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header title={SITE_TITLE} />
+    <main
+      class="antialiased max-w-2xl mb-40 flex flex-col md:flex-row mx-4 mt-8 lg:mx-auto min-h-screen"
+    >
+      <section class="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
+        <h2 class="text-3xl">my work</h2>
+        <p class="py-4">Here is a summary of my fullstack journey so far...</p>
+        <div class="divider divider-accent"></div>
+        <h3 class="text-xl font-semibold">Execify</h3>
+        <p class="text-gray-500">
+          Senior Software Engineer, Aug 2024 - Jan 2025
+        </p>
+        <p>
+          Execify is a startup looking to use AI to help the world of executive
+          operations. I joined as a Senior Software Engineer helping them the
+          build and launch their platform, my focus was on their AI Assit system
+          built using langchain, langgraph and openai.
+        </p>
+        <ul class="list-disc mx-4">
+          <li>
+            Developed a multi agent, 'plan and execute' style system using
+            langchain, langgraph and openai. Using multiple prompting techniques
+            such as few shot and Reactive to help the system learn and respond
+            to user requests.
+          </li>
+          <li>
+            Created custom frontend UI using sveltekit and tailwindcss. To help
+            the user interact with the system and provide feedback on the
+            response.
+          </li>
+        </ul>
+        <div class="divider divider-accent"></div>
+        <h3 class="text-xl font-semibold">Selfridges</h3>
+        <p class="text-gray-500">
+          Senior Fullstack Engineer, Oct 2020 - Aug 2024
+        </p>
+        <p>
+          I joined Selfridges at a pivotal moment in their replatforming
+          campign, helping to not only replatform the frontend to modern
+          technologies but also backend systems to provide a smoother customer
+          experience
+        </p>
+        <ul class="list-disc mx-4">
+          <li>
+            Delivered a new ‘Federated’ graphql platform using Apollo federation
+            and typescript, replacing old and unscalable backend systems.
+          </li>
+          <li>
+            Replatform legacy third party IFrame integration into a micro
+            frontend using SSR (Server Side Rendering) , React and AWS
+            (serverless)
+          </li>
+          <li>
+            Develop mfe (micro frontend) platfrom using NextJS and AWS S3 to
+            deliver a more performant and scalable frontend.
+          </li>
+          <li>
+            Help drive a culture of change and engineering enthusiasm in a new
+            department by hosting a monthly social event to encourage colleagues
+            to share there interests and passions in tech.
+          </li>
+        </ul>
+        <div class="divider divider-accent"></div>
+        <h3 class="text-xl font-semibold">Dunelm</h3>
+        <p class="text-gray-500">Fullstack Engineer, Dec 2021 - Oct 2022</p>
+        <p>
+          Full Stack Engineer in the checkout and payment team, with the
+          objective of delivering a seamless and transparent way for Dunelm
+          customers to pay.
+        </p>
+        <ul class="list-disc mx-4">
+          <li>
+            Responsible for maintaining and developing new features for Dunelm’s
+            first micro frontend, which uses Fastly, NextJS and AWS S3, to
+            deliver server rendered content to the user, and play an active role
+            in helping Dunelm achieve its new micro frontend architecture.
+          </li>
+          <li>
+            Leading the development of an ApplePay payment option by integrating
+            drop in react components from our integrated payment service
+            provider with our payment backend microservice.
+          </li>
+          <li>
+            Created a new event driven system using AWS Lambda and Eventbridge
+            to write transactions to a DynamoDb for the in house transaction
+            settlement system.
+          </li>
+        </ul>
+        <p class="text-gray-500 pt-4">
+          Graduate Software Engineer, Sept 2020 - Dec 2021
+        </p>
+        <p>
+          DevOps engineer developing and maintaining AWS infrastructure used for
+          hosting Dunelm’s technical estate.
+        </p>
+        <ul class="list-disc mx-4">
+          <li>
+            Built a reusable pipeline library using Gitlab CI to help
+            standardise CI/CD best practices and increase development flow of
+            new applications.
+          </li>
+          <li>
+            Implemented custom VCL logic for our CDN (Fastly) to allow targeted
+            traffic split when serving our new MFE platform.
+          </li>
+          <li>
+            Developed a reusable method using Terraform to allow direct to S3
+            routing of requests, allowing teams to serve content quicker from S3
+            via the edge of the CDN.
+          </li>
+        </ul>
+        <p class="pt-4">
+          Backend engineer developing serverless microservices (AWS ApiGateway
+          and Lambda) using NodeJS (Typescript).
+        </p>
+        <ul class="list-disc mx-4">
+          <li>
+            Developed backend logic to ensure our order processing systems were
+            Brexit compliant when processing orders being shipped to Northern
+            Ireland and the Channel Islands.
+          </li>
+          <li>
+            Improved unit testing by moving outdated tests from mocha and chai
+            to jest, increasing reliability of unit tests as well as increasing
+            code coverage.
+          </li>
+          <li>
+            Led team in migrating current code base from bitbucket to Gitlab and
+            developed pipelines using Gitlab CI, increasing the frequency and
+            reliability of our releases.
+          </li>
+        </ul>
+        <div class="divider divider-accent"></div>
+        <h3 class="text-xl font-semibold">Rolls Royce</h3>
+        <p class="text-gray-500">
+          Software Engineer - Intern, June 2018 - July 2019
+        </p>
+        <p>
+          Software design engineer responsible for developing real-time control
+          systems using Ada for the Trent-XWB fleet of turbo-fan jet engines,
+          used on the Airbus A350 aircraft.
+        </p>
+        <ul class="list-disc mx-4">
+          <li>
+            Developed an engine configuration switching system that would
+            determine certain engine parameters based on the type of XWB engine.
+          </li>
+          <li>
+            Led investigations into inefficient use of memory onboard the
+            electronic engine control unit, including building custom tooling
+            using python to scan binary files and determine current memory
+            boundaries for that particular build.
+          </li>
+          <li>
+            Regularly presented new design implementations at Design Technical
+            Approval meetings.
+          </li>
+        </ul>
+      </section>
+    </main>
+    <Footer />
+  </body>
 </html>

@@ -1,37 +1,50 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import TextCode from '../components/TextCode.astro';
-import SkillPill from '../components/SkillPill.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import TextCode from "../components/TextCode.astro";
+import SkillPill from "../components/SkillPill.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body class="min-h-screen">
-		<Header title={SITE_TITLE} />
-		<main class="hero min-h-screen">
-			<div class="hero-content w-full min-h-lg justify-between flex-col lg:flex-row-reverse ">
-    		<img src="/me.jpeg" class="max-w-sm rounded-lg shadow-2xl" alt="me"/>
-    		<div>
-      		<h1 class="text-8xl font-bold">Hi, I'm Andrew</h1>
-      		<h2 class="text-3xl font-semibold text-blue-200">Fullstack Engineer</h2>
-      		<p class="pt-6">Hey! My name is Andrew Morrison, I am a fullstack software engineer based in London.</p>
-      		<p>I currently <u class="font-semibold"><a href="/work">work</a></u> at <TextCode label="Selfridges"/>, replatforming and reinvigorating their engineering function</p>
-    			<div class="py-4">
-    			<SkillPill label="Typescript"/>
-					<SkillPill label="NextJS"/>
-					<SkillPill label="NodeJS"/>
-					<SkillPill label="AWS"/>
-					<SkillPill label="Supabase"/>
-    			</div>
-    		</div>
-  		</div>		
-  	</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="min-h-screen">
+    <Header title={SITE_TITLE} />
+    <main class="hero min-h-screen">
+      <div
+        class="hero-content w-full min-h-lg justify-between flex-col lg:flex-row-reverse"
+      >
+        <img src="/me.jpeg" class="max-w-sm rounded-lg shadow-2xl" alt="me" />
+        <div>
+          <h1 class="text-8xl font-bold">Hi, I'm Andrew</h1>
+          <h2 class="text-3xl font-semibold text-blue-200">
+            Fullstack Engineer
+          </h2>
+          <p class="pt-6">
+            Hey! My name is Andrew Morrison, I am a fullstack software engineer
+            based in London.
+          </p>
+          <p>
+            I am currently looking for a new opportunity, in fullstack
+            engineering, with a focus on AI and AI Agents.
+          </p>
+          <div class="py-4">
+            <SkillPill label="Typescript" />
+            <SkillPill label="NextJS" />
+            <SkillPill label="NodeJS" />
+            <SkillPill label="AWS" />
+            <SkillPill label="Supabase" />
+            <SkillPill label="Langchain" />
+            <SkillPill label="Langgraph" />
+            <SkillPill label="Agentic AI" />
+          </div>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
 </html>
